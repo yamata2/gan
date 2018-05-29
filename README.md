@@ -12,9 +12,9 @@ Author: Tatsuro Yamada <<ymt2.casino@gmail.com>>
 
 ## Implementation
 - GAN
--- normal loss  log(D(1-G(z)))
--- alternative loss -log(D(G(z)))
--- Wasserstein loss
+  - normal loss  log(D(1-G(z)))
+  - alternative loss -log(D(G(z)))
+  - Wasserstein loss
 
 ## Example
 ```
