@@ -1,0 +1,60 @@
+{
+    "layer00":{
+	"type": "fc",
+	"recording": false,
+	"param":{
+            "num_outputs": 64,
+	    "normalizer": "none",
+	    "activation": "leaky_relu"
+	}
+    },
+    "layer01":{
+	"type": "fc",
+	"recording": false,
+	"param":{
+            "num_outputs": 12544,
+	    "normalizer": "none",
+	    "activation": "leaky_relu"
+	}
+    },
+    "layer02":{
+	"type": "reshape",
+	"recording": false,
+	"param":{
+	    "shape": [7,7,256]
+	}
+    },
+    "layer03":{
+	"type": "deconv",
+	"recording": false,
+	"param":{
+	    "num_outputs":256,
+	    "kernel": 4,
+	    "stride": 2,
+	    "normalizer": "batch_norm",
+	    "activation": "leaky_relu"
+	}
+    },
+    "layer04":{
+	"type": "deconv",
+	"recording": false,
+	"param":{
+	    "num_outputs":128,
+	    "kernel": 4,
+	    "stride": 2,
+	    "normalizer": "batch_norm",
+	    "activation": "leaky_relu"
+	}
+    }, 
+    "layer05":{
+	"type": "deconv",
+	"recording": false,
+	"param":{
+	    "num_outputs":1,
+	    "kernel": 1,
+	    "stride": 1,
+	    "normalizer": "none",
+	    "activation": "sigmoid"
+	}
+    }
+}

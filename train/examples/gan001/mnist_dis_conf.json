@@ -1,0 +1,60 @@
+{
+    "layer00":{
+	"type": "conv",
+	"recording": false,
+	"param":{
+	    "num_outputs": 128,
+	    "kernel": 1,
+	    "stride": 1,
+	    "normalizer": "none",
+	    "activation": "leaky_relu"
+	}
+    },
+    "layer01":{
+	"type": "conv",
+	"recording": false,
+	"param":{
+	    "num_outputs": 256,
+	    "kernel": 4,
+	    "stride": 2,
+	    "normalizer": "none",
+	    "activation": "leaky_relu"
+	}
+    },
+    "layer02":{
+	"type": "conv",
+	"recording": false,
+	"param":{
+	    "num_outputs": 256,
+	    "kernel": 4,
+	    "stride": 2,
+	    "normalizer": "none",
+	    "activation": "leaky_relu"
+	}
+    },
+    "layer03":{
+	"type": "reshape",
+	"recording": false,
+	"param":{
+	    "shape": [12544]
+	}
+    },
+    "layer04":{
+	"type": "fc",
+	"recording": false,
+	"param":{
+            "num_outputs": 64,
+	    "normalizer": "none",
+	    "activation": "leaky_relu"
+	}
+    },
+    "layer05":{
+	"type": "fc",
+	"recording": false,
+	"param":{
+            "num_outputs": 10,
+	    "normalizer": "none",
+	    "activation": "tanh"
+	}
+    }
+}
